@@ -6,7 +6,7 @@
 <title>Abdul Rehman Rizwan — QA Engineering Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261029-v3"><link rel="stylesheet" href="theme-v3.css?v=20261029-v3">
+<link rel="stylesheet" href="styles.css?v=20261029-v4"><link rel="stylesheet" href="theme-v3.css?v=20261029-v4">
 <style id="qa-portfolio-v3">
 /* QA Portfolio UI v3 — warm editorial system, normalized project cards */
 :root{
@@ -534,6 +534,29 @@ nav a:hover,.text-link:hover{color:var(--accent)}
 .experience-stack span{font:9px/1.45 "DM Mono",monospace;color:#496463;background:#f1f4f1;border:1px solid #e2e8e0;border-radius:5px;padding:5px 8px}
 @media(max-width:560px){#experience .timeline-content{padding:17px 16px}#experience .timeline-content ul{font-size:11px;line-height:1.75}#experience .timeline-top{gap:8px}}
 
+
+/* Hero QA callouts: equal width, equal height, shared right edge */
+.hero-art .floating-chip,
+.hero-art .floating-chip.chip-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  box-sizing:border-box;
+  width:min(100%,340px);
+  max-width:100%;
+  min-height:42px;
+  margin:12px 0 0 auto;
+  padding:10px 14px;
+  line-height:1.45;
+}
+.hero-art .floating-chip.chip-bottom{margin-left:auto}
+@media(max-width:560px){
+  .hero-art .floating-chip,
+  .hero-art .floating-chip.chip-bottom{
+    width:min(100%,340px);
+    min-height:42px;
+  }
+}
 </style>
 </head>
 <body>
