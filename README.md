@@ -1,10 +1,12 @@
 # QA Engineering Portfolio
 
-Responsive light-themed portfolio for Abdul Rehman Rizwan, with an interactive browser-side QA lab preview and a genuine Python + Playwright suite.
+Responsive high-contrast dark-themed portfolio for Abdul Rehman Rizwan, with an interactive browser-side QA lab preview and a genuine Python + Playwright suite.
 
 ## What's included
 
 - Static portfolio website suitable for GitHub Pages.
+- High-contrast dark engineering theme with prominent personal introduction and project case studies.
+- Source explorer showing real Playwright code with an explanation of Arrange / Act / Assert.
 - QA Lab preview: illustrative browser-side checks; it does **not** launch Python or real Playwright tests.
 - Six real Playwright tests against a small local demo shop.
 - GitHub Actions workflow that runs the browser tests on relevant pushes and pull requests, or manually.
