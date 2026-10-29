@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>QA Demo Shop</title></head>
+<body>
+  <header><h1>QA Demo Shop</h1><nav><a href="#products">Products</a> <a href="#login">Login</a></nav></header>
+  <main>
+    <section id="products"><h2>Featured product</h2><article><h3>Automation Notebook</h3><p id="price" data-price="12.00">$12.00</p><button id="add-to-cart">Add to cart</button><p id="cart-status" role="status">Your cart is empty.</p></article></section>
+    <section id="login"><h2>Sign in</h2><form id="login-form"><label for="username">Username</label><input id="username" name="username" required><label for="password">Password</label><input id="password" name="password" type="password" required><button type="submit">Sign in</button><p id="login-message" role="status" aria-live="polite"></p></form></section>
+  </main>
+  <script>
+    document.getElementById("add-to-cart").addEventListener("click", () => {
+      document.getElementById("cart-status").textContent = "1 item in your cart.";
+    });
+    document.getElementById("login-form").addEventListener("submit", event => {
+      event.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+      document.getElementById("login-message").textContent =
+        username === "demo" && password === "playwright-demo"
+          ? "Signed in successfully."
+          : "Invalid username or password.";
+    });
+  </script>
+</body>
+</html>
