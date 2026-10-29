@@ -84,3 +84,17 @@ nav{color:#c5cde0}
 .ci-actions>span{font-size:10px;color:#aeb9d0}
 @media(max-width:800px){.site-header nav{background:#0d1426;border-color:var(--line)}.menu-toggle{background:#18223a;color:#fff;border-color:#394763}.code-inspector-head{align-items:flex-start;flex-direction:column}}
 @media(max-width:560px){.hero h1{font-size:47px}.code-inspector{padding:14px}.source-editor pre{font-size:10px;padding:14px}.code-explainer{grid-template-columns:1fr}}
+
+/* Expandable project case studies */
+.project-details{margin-top:18px;border-top:1px solid #2d3954;padding-top:12px}
+.project-details summary{display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;list-style:none;color:#b9c7ff;font-size:11px;font-weight:700;letter-spacing:.02em;padding:5px 0}
+.project-details summary::-webkit-details-marker{display:none}
+.project-details summary span{font-size:18px;line-height:1;color:#a8b6ff;transition:transform .2s}
+.project-details[open] summary span{transform:rotate(45deg)}
+.project-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.project-detail{padding:13px;background:#0d1527;border:1px solid #2b3853;border-radius:8px;min-width:0}
+.project-detail h4{font:500 10px var(--mono);text-transform:uppercase;letter-spacing:.07em;color:#9fb0ff;margin:0 0 7px}
+.project-detail p{font-size:12px;line-height:1.7;color:#c1cbe0;margin:0}
+.project-card:has(.project-details[open]){border-color:#6278c8;box-shadow:0 12px 38px #0003}
+.project-card .project-body{padding-bottom:22px}
+@media(max-width:560px){.project-detail-grid{grid-template-columns:1fr}.project-detail p{font-size:12px}}
