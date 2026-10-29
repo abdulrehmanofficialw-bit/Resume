@@ -521,6 +521,19 @@ nav a:hover,.text-link:hover{color:var(--accent)}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
+
+/* Expanded work history: readable, scannable detail and tech stack */
+#experience .section-heading>p{max-width:430px}
+#experience .timeline-item{padding-bottom:36px}
+#experience .timeline-content{background:#fffdf9;border:1px solid #e1ddd5;border-radius:14px;padding:22px 24px;box-shadow:0 4px 14px #2b3c3409}
+#experience .timeline-content ul{margin:12px 0 0;padding-left:19px;color:#55696b;font-size:12px;line-height:1.8}
+#experience .timeline-content li{padding:4px 0 5px 2px}
+#experience .timeline-content li::marker{color:#c84d2d}
+#experience .timeline-content li strong{color:#a93d23;font-weight:800}
+.experience-stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:17px;padding-top:14px;border-top:1px solid #e8e1d7}
+.experience-stack span{font:9px/1.45 "DM Mono",monospace;color:#496463;background:#f1f4f1;border:1px solid #e2e8e0;border-radius:5px;padding:5px 8px}
+@media(max-width:560px){#experience .timeline-content{padding:17px 16px}#experience .timeline-content ul{font-size:11px;line-height:1.75}#experience .timeline-top{gap:8px}}
+
 </style>
 </head>
 <body>
@@ -555,7 +568,32 @@ nav a:hover,.text-link:hover{color:var(--accent)}
     expect(page.locator(<span class="syntax-green">"#login-message"</span>)).to_have_text(
         <span class="syntax-green">"Invalid username or password."</span>
     )</code></pre></div><div class="code-explainer"><div><strong>Arrange</strong><span>Open the demo app and prepare inputs.</span></div><div><strong>Act</strong><span>Click the cart or submit invalid login details.</span></div><div><strong>Assert</strong><span>Playwright verifies the exact user-visible result.</span></div></div><div class="ci-actions"><a class="button button-primary" href="https://github.com/abdulrehmanofficialw-bit/Resume/actions" target="_blank" rel="noreferrer">See real CI runs & logs ↗</a><a class="button button-secondary" href="https://github.com/abdulrehmanofficialw-bit/Resume" target="_blank" rel="noreferrer">Browse repository ↗</a><span>CI uses real Chromium browser tests. The on-page preview is explicitly illustrative.</span></div></div><p class="lab-footnote"><strong>Why two modes?</strong> The preview responds instantly without server infrastructure. Python Playwright runs in GitHub Actions, where a real browser is installed. CI results are genuine; preview results are illustrative.</p></div></section>
-<section class="section-wrap section-block" id="experience"><div class="section-heading"><div><div class="section-index">03 / EXPERIENCE</div><h2>Quality across<br><span class="muted-heading">the delivery cycle.</span></h2></div><p>From test design to release readiness, using automation to shorten feedback loops and make failures easier to investigate.</p></div><div class="timeline"><article class="timeline-item"><div class="timeline-date">FEB 2024 — PRESENT</div><div class="timeline-content"><div class="timeline-top"><h3>QA Engineer — Manual & Automation</h3><span class="company-pill">Contour Software</span></div><ul><li>Develop and maintain Python / Playwright automation for enterprise web applications.</li><li>Validate workflows across UI, API, and database layers using Playwright, Postman, and SQL.</li><li>Use AI-assisted workflows for test design, automation support, and reporting.</li><li>Support regression, release readiness, defect investigation, and CI/CD execution.</li></ul></div></article><article class="timeline-item"><div class="timeline-date">SEP 2021 — DEC 2023</div><div class="timeline-content"><div class="timeline-top"><h3>Software QA Engineer — Manual & Automation</h3><span class="company-pill">IKS Logics</span></div><ul><li>Executed functional, regression, and integration testing for enterprise applications.</li><li>Built Selenium automation with Python and BDD scenarios using Gherkin / Behave.</li><li>Performed API testing and database verification, managed defects, and supported releases.</li></ul></div></article></div></section>
+<section class="section-wrap section-block" id="experience"><div class="section-heading"><div><div class="section-index">03 / EXPERIENCE</div><h2>Quality across<br><span class="muted-heading">the delivery cycle.</span></h2></div><p>Hands-on responsibilities across test planning, automation, AI-assisted QA, APIs, data integrity, CI/CD, defect investigation, and release quality.</p></div><div class="timeline">
+<article class="timeline-item"><div class="timeline-date">FEB 2024 — PRESENT</div><div class="timeline-content"><div class="timeline-top"><h3>QA Engineer — Manual & Automation</h3><span class="company-pill">Contour Software</span></div>
+<ul>
+<li>Design, review, and execute comprehensive test plans and detailed test cases for enterprise web applications across functional, regression, integration, smoke, API, UAT, and release cycles.</li>
+<li>Develop and maintain Python / Playwright automation, reducing regression execution time by <strong>50%</strong> while continuously optimising the suite for faster feedback.</li>
+<li>Perform end-to-end validation across UI, API, and database layers using Playwright / Python, Postman, and SQL to verify business workflows and backend data integrity.</li>
+<li>Use AI-assisted test engineering with Playwright MCP and Claude, previously Codex, to accelerate scenario generation, identify edge cases, improve coverage, and support executable test creation.</li>
+<li>Create structured, detailed test steps for human review and Playwright MCP automation workflows; integrate automated tests into Behave / BDD and generate Allure reports.</li>
+<li>Build automated baseline-versus-current report comparison workflows to identify regressions, unexpected changes, missing data, and report differences.</li>
+<li>Optimise automated reporting and execution workflows from approximately <strong>40 minutes to 30 minutes</strong> through test-suite and execution improvements.</li>
+<li>Test APIs with Postman, covering authentication, endpoints, business logic, validation, and error handling; use SQL to verify backend data integrity.</li>
+<li>Run automated workflows through GitLab / Bitbucket CI/CD pipelines using YAML configuration and support automated reporting; validate template-driven and file-upload workflows and downstream processing.</li>
+<li>Collaborate with developers, Product Owners, Business Analysts, and stakeholders to investigate defects, verify fixes, communicate quality risks, support release readiness, and mentor junior QA engineers.</li>
+</ul>
+<div class="experience-stack" aria-label="Technologies used"><span>Python</span><span>Playwright</span><span>Playwright MCP</span><span>Claude / Codex</span><span>Postman</span><span>SQL / MySQL</span><span>Behave / BDD</span><span>Allure</span><span>GitLab / Bitbucket CI/CD</span><span>YAML</span><span>JMeter</span></div>
+</div></article>
+<article class="timeline-item"><div class="timeline-date">SEP 2021 — DEC 2023</div><div class="timeline-content"><div class="timeline-top"><h3>Software QA Engineer — Manual & Automation</h3><span class="company-pill">IKS Logics</span></div>
+<ul>
+<li>Prepared and executed functional, regression, and integration testing for enterprise web applications and supported release verification.</li>
+<li>Developed Selenium automation scripts in Python and created BDD test scenarios using Gherkin / Behave-style workflows.</li>
+<li>Performed API testing with Postman, validated REST API behaviour, and verified backend database operations using SQL.</li>
+<li>Managed defects and testing activities in Jira and maintained QA documentation in Notion.</li>
+<li>Worked directly with developers and Product Managers to investigate defects, validate fixes, and improve feature quality.</li>
+</ul>
+<div class="experience-stack" aria-label="Technologies used"><span>Python</span><span>Selenium</span><span>Gherkin / Behave</span><span>Postman / REST APIs</span><span>SQL</span><span>Jira</span><span>Notion</span></div>
+</div></article></div></section>
 <section class="skills-section" id="about"><div class="section-wrap skills-wrap"><div><div class="section-index">04 / TOOLKIT</div><h2>A practical<br>quality toolkit.</h2><p class="skills-intro">Automation, exploratory thinking, backend validation, and reporting to build confidence in software behavior.</p></div><div class="skill-groups"><div class="skill-group"><span>01</span><div><h3>Automation</h3><p>Python · Playwright · Selenium · Behave · BDD · Gherkin</p></div></div><div class="skill-group"><span>02</span><div><h3>API & data</h3><p>Postman · REST APIs · SQL · MySQL · Backend validation</p></div></div><div class="skill-group"><span>03</span><div><h3>AI-assisted QA</h3><p>Playwright MCP · Claude · Codex workflows · AI-assisted test design</p></div></div><div class="skill-group"><span>04</span><div><h3>Delivery & reporting</h3><p>Allure · Jira · GitLab · Bitbucket · YAML CI/CD · JMeter</p></div></div></div></div></section>
 <section class="section-wrap contact-section" id="contact"><div class="contact-card"><div class="section-index">05 / NEXT CHAPTER</div><h2>Let's make software<br><span class="muted-heading">more trustworthy.</span></h2><p>Interested in QA automation, SDET opportunities, or practical quality engineering? I'd be happy to connect.</p><div class="contact-actions"><a class="button button-primary" href="mailto:abdulrehmanrizwan.3620@gmail.com">Email me ↗</a><button class="button button-secondary" id="copyEmail">Copy email</button><a class="button button-secondary" href="https://github.com/abdulrehmanofficialw-bit/Resume">GitHub repo ↗</a></div><p id="copyFeedback" aria-live="polite"></p></div></section>
 <section class="section-wrap setup-section"><div class="setup-card"><div class="section-index">FOR RECRUITERS & DEVELOPERS</div><h2>Reproducible by design.</h2><p>This repository includes six real Python Playwright tests, readable source code, and a GitHub Actions workflow. Open Actions to inspect execution logs and download HTML/JUnit reports.</p><a class="text-link" href="README.md">Read project setup notes ↗</a></div></section>
