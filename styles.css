@@ -98,3 +98,69 @@ nav{color:#c5cde0}
 .project-card:has(.project-details[open]){border-color:#6278c8;box-shadow:0 12px 38px #0003}
 .project-card .project-body{padding-bottom:22px}
 @media(max-width:560px){.project-detail-grid{grid-template-columns:1fr}.project-detail p{font-size:12px}}
+
+
+/* Layout repair: keep project cards independent and prevent cramped/overlapping grids */
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:start;
+  align-content:start;
+  gap:24px;
+}
+.project-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-self:start;
+  min-width:0;
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  isolation:isolate;
+}
+.project-card .project-visual,
+.project-card .project-body{
+  min-width:0;
+  width:100%;
+}
+.project-card .project-body{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  flex:1 1 auto;
+  overflow-wrap:anywhere;
+}
+.project-card h3,
+.project-card p,
+.project-card .project-kicker,
+.project-card .tag-row,
+.project-card .project-details{
+  max-width:100%;
+  overflow-wrap:anywhere;
+}
+.project-card .project-details{
+  position:static;
+  flex:none;
+}
+.project-detail-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:stretch;
+}
+.project-detail{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+.project-detail p{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+@media(max-width:900px){
+  .project-grid{grid-template-columns:minmax(0,1fr);gap:22px}
+  .project-card{width:100%}
+}
+@media(max-width:560px){
+  .project-detail-grid{grid-template-columns:minmax(0,1fr)}
+  .project-visual{padding:16px}
+  .project-body{padding:19px 17px 22px}
+}
