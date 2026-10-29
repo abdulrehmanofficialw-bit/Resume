@@ -164,3 +164,23 @@ nav{color:#c5cde0}
   .project-visual{padding:16px}
   .project-body{padding:19px 17px 22px}
 }
+
+
+/* Consistent project-card rhythm across the entire work grid */
+.project-visual{
+  min-height:190px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:12px;
+}
+.visual-enterprise{background:#1c2942}
+.visual-enterprise .domain-flow{margin:22px 0;gap:10px}
+.project-card .project-body{height:100%}
+.project-card .project-details{margin-top:auto;padding-top:14px}
+.project-card .project-body>p{line-height:1.75}
+.project-card .tag-row{margin-bottom:2px}
+@media(max-width:900px){
+  .project-visual{min-height:180px}
+  .visual-tessera{min-height:290px}
+}
